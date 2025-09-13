@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Kirop - Data Analytics Professional</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fixed Navigation Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Brian Kirop</h1>
+                <span class="logo-subtitle">Data Analytics</span>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-section="home">Home</button>
+                <button class="nav-btn" data-section="about">About</button>
+                <button class="nav-btn" data-section="skills">Skills</button>
+                <button class="nav-btn" data-section="projects">Projects</button>
+                <button class="nav-btn" data-section="contact">Contact</button>
+            </nav>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <div class="theme-icon">🌙</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- HOME SECTION -->
+        <section id="home" class="section active hero-section">
+            <div class="hero-background">
+                <div class="data-particles">
+                    <div class="particle" style="--delay: 0s; --duration: 8s;"></div>
+                    <div class="particle" style="--delay: 2s; --duration: 10s;"></div>
+                    <div class="particle" style="--delay: 4s; --duration: 12s;"></div>
+                    <div class="particle" style="--delay: 6s; --duration: 9s;"></div>
+                    <div class="particle" style="--delay: 1s; --duration: 11s;"></div>
+                </div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Data Analytics Professional</h1>
+                        <h2 class="hero-subtitle">Driving Evidence-based Decision Making</h2>
+                        <p class="hero-description">
+                            Bridging the gap between Analytics & Business Value through deep analytical expertise 
+                            and innovative data solutions that create positive impact.
+                        </p>
+                        <div class="hero-stats" id="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="100">0</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="50">0</span>
+                                <span class="stat-label">Data Models Built</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="5">0</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <button class="cta-primary" onclick="triggerDataVisualization()">
+                                <span>Explore My Work</span>
+                                <div class="btn-wave"></div>
+                            </button>
+                            <button class="cta-secondary" onclick="navigateToSection('contact')">
+                                <span>Get In Touch</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="data-chart" id="animated-chart">
+                            <div class="chart-bars">
+                                <div class="bar" data-height="60"></div>
+                                <div class="bar" data-height="80"></div>
+                                <div class="bar" data-height="45"></div>
+                                <div class="bar" data-height="90"></div>
+                                <div class="bar" data-height="70"></div>
+                                <div class="bar" data-height="95"></div>
+                                <div class="bar" data-height="55"></div>
+                            </div>
+                            <div class="chart-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-intro">
+                            A purpose-driven Data Analyst with deep analytical and quantitative expertise and 
+                            BSc. in Mathematics (Statistics Option). I leverage the full potential of data to 
+                            derive business insights, solve complex problems, and drive evidence-based decision 
+                            making that creates positive impact.
+                        </p>
+                        <p>
+                            With strong expertise in Python, R, SQL, Excel, Power BI, and Tableau, I transform 
+                            raw data into actionable insights that empower organizations to make informed decisions. 
+                            My experience spans statistical modeling, machine learning, data visualization, and 
+                            predictive analytics.
+                        </p>
+                        <p>
+                            When I'm not diving deep into data, you'll find me exploring new analytical techniques, 
+                            contributing to data science communities, or experimenting with cutting-edge visualization 
+                            tools. I believe in the transformative power of data to solve real-world challenges.
+                        </p>
+                        <div class="expertise-areas">
+                            <div class="expertise-item" onclick="highlightExpertise(this, 'statistical')">
+                                <div class="expertise-icon">📊</div>
+                                <h4>Statistical Analysis</h4>
+                                <p>Advanced hypothesis testing and modeling</p>
+                            </div>
+                            <div class="expertise-item" onclick="highlightExpertise(this, 'visualization')">
+                                <div class="expertise-icon">📈</div>
+                                <h4>Data Visualization</h4>
+                                <p>Compelling dashboards and insights</p>
+                            </div>
+                            <div class="expertise-item" onclick="highlightExpertise(this, 'ml')">
+                                <div class="expertise-icon">🤖</div>
+                                <h4>Machine Learning</h4>
+                                <p>Predictive models and automation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="profile-container">
+                            <div class="profile-ring"></div>
+                            <div class="profile-image">
+                                <div class="profile-placeholder">BK</div>
+                            </div>
+                            <div class="floating-skills">
+                                <span class="skill-bubble" style="--delay: 0s;">Python</span>
+                                <span class="skill-bubble" style="--delay: 1s;">R</span>
+                                <span class="skill-bubble" style="--delay: 2s;">SQL</span>
+                                <span class="skill-bubble" style="--delay: 3s;">Tableau</span>
+                                <span class="skill-bubble" style="--delay: 4s;">Power BI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category" data-category="analysis">
+                        <div class="category-header">
+                            <h3>Statistical Analysis</h3>
+                            <div class="category-icon">📊</div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Hypothesis Testing</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Regression Analysis</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Time Series Forecasting</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="programming">
+                        <div class="category-header">
+                            <h3>Programming & Tools</h3>
+                            <div class="category-icon">💻</div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Python (Pandas, NumPy, Scikit-learn)</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92"></div>
+                                </div>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">R Programming</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">SQL & Database Management</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="visualization">
+                        <div class="category-header">
+                            <h3>Data Visualization</h3>
+                            <div class="category-icon">📈</div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Power BI</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="94"></div>
+                                </div>
+                                <span class="skill-percentage">94%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Tableau</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="91"></div>
+                                </div>
+                                <span class="skill-percentage">91%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Matplotlib & Seaborn</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="87"></div>
+                                </div>
+                                <span class="skill-percentage">87%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="ml">
+                        <div class="category-header">
+                            <h3>Machine Learning</h3>
+                            <div class="category-icon">🤖</div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Supervised Learning</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Clustering & Classification</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="82"></div>
+                                </div>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Model Validation</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-actions">
+                    <button class="animate-skills-btn" onclick="animateAllSkills()">
+                        <span>Animate Skills</span>
+                        <div class="btn-ripple"></div>
+                    </button>
+                    <button class="reset-skills-btn" onclick="resetSkills()">
+                        <span>Reset Animation</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="capstone">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="project-image">
+                                    <div class="project-icon">🎯</div>
+                                    <div class="project-glow"></div>
+                                </div>
+                                <h3>Data Science Capstone</h3>
+                                <p>End-to-end ML Pipeline</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">ML</span>
+                                    <span class="tag">Deploy</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Project Details</h3>
+                                <p>Comprehensive capstone project demonstrating end-to-end data science workflow including data collection, cleaning, analysis, machine learning modeling, and deployment of predictive solutions.</p>
+                                <div class="project-features">
+                                    <div class="feature">✓ Data Collection & Cleaning</div>
+                                    <div class="feature">✓ Exploratory Data Analysis</div>
+                                    <div class="feature">✓ ML Model Development</div>
+                                    <div class="feature">✓ Model Deployment</div>
+                                </div>
+                                <button class="demo-btn" onclick="demoProject('capstone')">View Demo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="analytics">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="project-image">
+                                    <div class="project-icon">📊</div>
+                                    <div class="project-glow"></div>
+                                </div>
+                                <h3>Business Analytics Dashboard</h3>
+                                <p>Interactive Power BI Solution</p>
+                                <div class="project-tags">
+                                    <span class="tag">Power BI</span>
+                                    <span class="tag">SQL</span>
+                                    <span class="tag">ETL</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>Dashboard Features</h3>
+                                <p>Interactive business intelligence dashboard providing real-time insights through advanced data visualization and automated reporting capabilities.</p>
+                                <div class="project-features">
+                                    <div class="feature">✓ Real-time Data Processing</div>
+                                    <div class="feature">✓ Interactive Visualizations</div>
+                                    <div class="feature">✓ Automated Reports</div>
+                                    <div class="feature">✓ KPI Monitoring</div>
+                                </div>
+                                <button class="demo-btn" onclick="demoProject('analytics')">View Demo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="ml">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="project-image">
+                                    <div class="project-icon">🤖</div>
+                                    <div class="project-glow"></div>
+                                </div>
+                                <h3>Predictive Analytics Model</h3>
+                                <p>Advanced ML Implementation</p>
+                                <div class="project-tags">
+                                    <span class="tag">Scikit-learn</span>
+                                    <span class="tag">Stats</span>
+                                    <span class="tag">API</span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <h3>ML Capabilities</h3>
+                                <p>Advanced machine learning model for predictive analytics with comprehensive statistical validation and deployment through REST API endpoints.</p>
+                                <div class="project-features">
+                                    <div class="feature">✓ Feature Engineering</div>
+                                    <div class="feature">✓ Model Selection</div>
+                                    <div class="feature">✓ Cross Validation</div>
+                                    <div class="feature">✓ API Integration</div>
+                                </div>
+                                <button class="demo-btn" onclick="demoProject('ml')">View Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-intro">
+                            <h3>Ready to transform data into actionable insights?</h3>
+                            <p>I'm always excited to work on challenging analytics projects and collaborate with innovative teams to drive data-driven solutions.</p>
+                        </div>
+                        <div class="contact-methods">
+                            <div class="contact-method" onclick="animateContactMethod(this, 'email')">
+                                <div class="method-icon">📧</div>
+                                <div class="method-content">
+                                    <h4>Email</h4>
+                                    <p>briankirop@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method" onclick="animateContactMethod(this, 'linkedin')">
+                                <div class="method-icon">💼</div>
+                                <div class="method-content">
+                                    <h4>LinkedIn</h4>
+                                    <p>linkedin.com/in/briankirop</p>
+                                </div>
+                            </div>
+                            <div class="contact-method" onclick="animateContactMethod(this, 'github')">
+                                <div class="method-icon">💻</div>
+                                <div class="method-content">
+                                    <h4>GitHub</h4>
+                                    <p>github.com/bkirop</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Full Name</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Email Address</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <select id="project-type" name="project-type" required>
+                                    <option value="">Select Project Type</option>
+                                    <option value="analytics">Data Analytics</option>
+                                    <option value="visualization">Data Visualization</option>
+                                    <option value="ml">Machine Learning</option>
+                                    <option value="consulting">Analytics Consulting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label for="project-type">Project Type</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" required></textarea>
+                                <label for="message">Project Details</label>
+                                <div class="form-line"></div>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <div class="loading-spinner"></div>
+                                <div class="btn-success">✓</div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Elements -->
+    <div class="demo-showcase" id="demo-showcase">
+        <div class="showcase-content">
+            <button class="close-showcase" onclick="closeShowcase()">×</button>
+            <div id="showcase-title">Project Demo</div>
+            <div id="showcase-description">Demo content will appear here</div>
+            <div class="showcase-visual" id="showcase-visual">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div id="notification-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Notification</h3>
+                <button class="close-modal" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">Message content</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner-container">
+            <div class="data-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="loading-text">Processing your request...</p>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    </body>
+</html>
